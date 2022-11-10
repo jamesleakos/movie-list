@@ -38,8 +38,8 @@ const App = () => {
     [movieData]
   )
 
-  const toggleView = () => {
-    setShowHaveWatched(!showHaveWatched);
+  const toggleView = (set) => {
+    setShowHaveWatched(set);
   }
   useEffect(
     () => {
@@ -56,8 +56,8 @@ const App = () => {
       <div className="bars">
         <AddMovieBar addNewMovie={addNewMovie}/>
         <SearchBar filterMovies={showMovies}/>
-        <button className={'watch-button' + (showHaveWatched ? ' watch-button-selected' : '')} onClick={toggleView}>Watched</button>
-        <button className={'watch-button' + (!showHaveWatched ? ' watch-button-selected' : '')} onClick={toggleView}>To Watch</button>
+        <button className={'watch-button' + (showHaveWatched ? ' watch-button-selected' : '')} onClick={() => toggleView(true)}>Watched</button>
+        <button className={'watch-button' + (!showHaveWatched ? ' watch-button-selected' : '')} onClick={() => toggleView(false)}>To Watch</button>
       </div>
       <div className="list-container">
         <List movies={displayMovies} toggleWatched={toggleWatched}/>

@@ -8,11 +8,14 @@ const ListItem = ({movie, toggleWatched}) => {
     <div className={'list-item' + (!hidden ? ' active' : '')}>
       <div className="top-bar" onClick={() => setHidden(!hidden)}>
         {movie.title}
-        <button onClick={() => toggleWatched(movie, !movie.watched)}>{movie.watched ? 'Watched' : 'To Watch'}</button>
       </div>
       { !hidden ? 
         <div className="info-panel">
-          Hello hello hello
+          <p>Year: 1985</p>
+          <p>Runtime: 107 minutes</p>
+          <p>Metascore: 46</p>
+          <p>IMBD Rating: 6.2</p>
+          <button onClick={() => {toggleWatched(movie, !movie.watched); setHidden(true); }}>{movie.watched ? 'Watched' : 'To Watch'}</button>
         </div>
         : null
       }
