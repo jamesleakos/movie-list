@@ -1,3 +1,71 @@
+
+
 body {
   font-family: sans-serif, arial;
+  margin: 0;
+  padding: 0;
+  background-color: white
+}
+
+header {
+  background-color: #000000;
+  color: #FD6357;
+  padding: 1px 20px;
+}
+
+.bars {
+  background-color: #5EB7AA;
+}
+
+.movie-form {
+  padding: 10px 20px;
+}
+
+.movie-form .text-enter {
+  position: absolute;
+  left: 125px;
+}
+
+.movie-form .button {
+  position: absolute;
+  left: 350px;
+}
+
+.watch-button {
+  margin: 10px 20px;
+}
+
+.watch-button-selected {
+  background-color: #FD6357;
+}
+
+.list-container {
+  background-color: white;
+  padding: 1px;
+  border: 5px solid #FD6357;
+}
+
+.list-item {
+  /* padding: 10px; */
+  border : 1px solid #5EB7AA;
+}
+.list-item:hover {
+  background-color: #5EB7AA;
+}
+.list-item.active {
+  background-color: #5EB7AA;
+}
+
+.list-item .top-bar {
+  padding: 10px;
+}
+
+.list-item .info-panel {
+  padding: 20px;
+  background-color: white;
+}
+
+.list-item button {
+  position: absolute;
+  left: 500px;
 }
