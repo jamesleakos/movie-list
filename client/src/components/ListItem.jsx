@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ListItem = ({movie, toggleWatched}) => {
+const ListItem = ({movie, toggleWatched, deleteMovie}) => {
 
   const [hidden, setHidden] = useState(true);
 
@@ -16,6 +16,7 @@ const ListItem = ({movie, toggleWatched}) => {
           <p>Metascore: 46</p>
           <p>IMBD Rating: 6.2</p>
           <button onClick={() => {toggleWatched(movie, !movie.watched); setHidden(true); }}>{movie.watched ? 'Watched' : 'To Watch'}</button>
+          <button onClick={() => {deleteMovie(movie)}}>Delete</button>
         </div>
         : null
       }
